@@ -1,0 +1,11 @@
+{
+  "name": "pinokio-n8n",
+  "version": "1.0.0",
+  "scripts": {
+    "install": "npm install",
+    "start": "n8n start"
+  },
+  "dependencies": {
+    "n8n": "latest"
+  }
+}
