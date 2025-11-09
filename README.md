@@ -1,4 +1,6 @@
-# Custom Pinokio script for n8n via Gepetto. Uses Conda env with Node.js.
+# Custom Pinokio script for n8n via Gepetto. 
+
+## Uses Conda env with Node.js.
 
 In Pinokio, start Gepetto (if not running, troubleshoot via logs—likely port 7860 conflict; stop others first if applicable - careful you save eferything before).
 
