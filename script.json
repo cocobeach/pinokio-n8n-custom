@@ -1,0 +1,31 @@
+{
+  "name": "n8n Workflow Automation",
+  "description": "Node.js-based low-code orchestrator for AI chains (Wan2GP, FramePack, etc.)",
+  "icon": "https://n8n.io/logo.png",
+  "publisher": "n8n-io",
+  "install": {
+    "script": [
+      "conda create -n n8n python=3.10 nodejs -y",
+      "conda activate n8n",
+      "cd app && npm install -g n8n",
+      "n8n user-management:user add --firstName Admin --lastName User --email admin@example.com --password yourstrongpass --role owner"
+    ]
+  },
+  "start": {
+    "script": [
+      "conda activate n8n",
+      "n8n start --tunnel"
+    ]
+  },
+  "stop": {
+    "script": ["pkill -f n8n"]
+  },
+  "ports": [5678],
+  "env": {
+    "N8N_BASIC_AUTH_ACTIVE": "true",
+    "N8N_BASIC_AUTH_USER": "admin",
+    "N8N_BASIC_AUTH_PASSWORD": "yourstrongpass",
+    "N8N_HOST": "localhost",
+    "N8N_PORT": "5678"
+  }
+}
