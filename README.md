@@ -12,11 +12,15 @@ Install: Gepetto clones, runs script.json commands (~3-5min; watches for npm pro
 
 Start: Hits localhost:5678—login with admin/yourstrongpass.
 
-Test & Troubleshoot:Success: n8n editor loads; create a test flow (e.g., HTTP to Wan2GP /predict).
+Test & Troubleshoot:Success: n8n editor loads; create a test flow.
 
-Errors:"Conda not found": Ensure Pinokio's Conda is active (Pinokio Settings > Env > Base).
+## Errors Troubleshooting:
+
+"Conda not found": Ensure Pinokio's Conda is active (Pinokio Settings > Env > Base).
+
 npm fails: Add "npm ci" to install script if cache issues.
-Windows-specific (your log shows Win10): Use cmd /c prefix in scripts, e.g., "cmd /c npm install -g n8n".
+
+Windows-specific: Use cmd /c prefix in scripts, e.g., "cmd /c npm install -g n8n".
 
 Logs: Gepetto's console shows full output—grep for "n8n" to debug.
 
