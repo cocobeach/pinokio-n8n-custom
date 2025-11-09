@@ -5,9 +5,9 @@
   "publisher": "n8n-io",
   "install": {
     "script": [
-      "conda create -n n8n python=3.10 nodejs -y",
+      "conda install nodejs -y -c conda-forge",
       "conda activate n8n",
-      "cd app && npm install -g n8n",
+      "npm install -g n8n",
       "n8n user-management:user add --firstName Admin --lastName User --email admin@example.com --password yourstrongpass --role owner"
     ]
   },
@@ -18,7 +18,7 @@
     ]
   },
   "stop": {
-    "script": ["pkill -f n8n"]
+    "script": ["pkill -f n8n || taskkill /f /im node.exe /t"]
   },
   "ports": [5678],
   "env": {
